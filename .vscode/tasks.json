@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    {
+      "label": "build",
+      "type": "process",
+      "command": "build.bat"
+    }
+  ],
+  "version": "2.0.0"
+}
