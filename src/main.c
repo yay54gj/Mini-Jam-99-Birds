@@ -1,15 +1,11 @@
 #include "../include/raylib.h"
 #include "../include/raymath.h"
 
+#include "./boid.h"
+
 #define CBOIDS 10
 #define FPS    60.0
 #define IFPS   (1.0 / 60.0)
-
-typedef struct {
-    Vector2 pos;
-    Vector2 vel;
-    Vector2 acc;
-}Boid;
 
 int main(void)
 {
@@ -48,7 +44,7 @@ int main(void)
                                 Clamp(boids[i].pos.y + 1 * IFPS, -10 * IFPS, 10 * IFPS);
         }
         BeginDrawing();
-            ClearBackground(RAYWHITE);
+            ClearBackground(BLUE);
             DrawCircleV(mousepos, 3, BLACK);
             for (int i = 0; i < CBOIDS; i++){
                 DrawCircleV(boids[i].pos, 3, RED);
